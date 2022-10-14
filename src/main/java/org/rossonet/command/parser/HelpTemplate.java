@@ -1,6 +1,6 @@
 package org.rossonet.command.parser;
 
-public final class HelpTemplate {
+public class HelpTemplate {
 
 	public static HelpTemplate fromString(final String template) {
 		return new HelpTemplate(template);
@@ -8,7 +8,7 @@ public final class HelpTemplate {
 
 	private final String template;
 
-	private HelpTemplate(final String template) {
+	protected HelpTemplate(final String template) {
 		this.template = template;
 	}
 

@@ -2,12 +2,12 @@ package org.rossonet.command.parser.option.token;
 
 public class ParameterEnumToken implements Token {
 
-	public final class ParameterEnumTokenBuilder implements TokenBuilder<ParameterEnumToken> {
+	public final static class ParameterEnumTokenBuilder implements TokenBuilder<ParameterEnumToken> {
 
 		@Override
 		public ParameterEnumToken build() {
 			// TODO Auto-generated method stub
-			return null;
+			return new ParameterEnumToken();
 		}
 
 	}
@@ -15,12 +15,6 @@ public class ParameterEnumToken implements Token {
 	// mantenere privato
 	private ParameterEnumToken() {
 
-	}
-
-	@Override
-	public <BUILDER extends TokenBuilder<? extends Token>> BUILDER getNewBuilder() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
@@ -39,6 +33,12 @@ public class ParameterEnumToken implements Token {
 	public TokenMatch lookingInCommandLine(final String[] commandLine) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean searchInTotalCommadLine() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

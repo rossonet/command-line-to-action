@@ -2,12 +2,12 @@ package org.rossonet.command.parser.option.token;
 
 public class ParameterUnaryToken implements Token {
 
-	public final class ParameterUnaryTokenBuilder implements TokenBuilder<ParameterUnaryToken> {
+	public final static class ParameterUnaryTokenBuilder implements TokenBuilder<ParameterUnaryToken> {
 
 		@Override
 		public ParameterUnaryToken build() {
 			// TODO Auto-generated method stub
-			return null;
+			return new ParameterUnaryToken();
 		}
 
 	}
@@ -15,12 +15,6 @@ public class ParameterUnaryToken implements Token {
 	// mantenere privato
 	private ParameterUnaryToken() {
 
-	}
-
-	@Override
-	public <BUILDER extends TokenBuilder<? extends Token>> BUILDER getNewBuilder() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
@@ -39,6 +33,12 @@ public class ParameterUnaryToken implements Token {
 	public TokenMatch lookingInCommandLine(final String[] commandLine) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean searchInTotalCommadLine() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

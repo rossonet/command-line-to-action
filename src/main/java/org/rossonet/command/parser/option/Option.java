@@ -2,6 +2,7 @@ package org.rossonet.command.parser.option;
 
 import java.util.Collection;
 
+import org.rossonet.command.parser.CommandParser;
 import org.rossonet.command.parser.action.Action;
 import org.rossonet.command.parser.action.ErrorAction;
 import org.rossonet.command.parser.option.token.Token;
@@ -15,6 +16,8 @@ public interface Option {
 	public Action getAction();
 
 	public int getActionPriority();
+
+	public CommandParser getCommandParser();
 
 	public String getDescription();
 
@@ -42,13 +45,15 @@ public interface Option {
 
 	public Option setActionPriority(int priority);
 
-	public void setDescription(String description);
+	public Option setCommandParser(CommandParser commandParser);
+
+	public Option setDescription(String description);
 
 	public Option setErrorAction(ErrorAction errorAction);
 
-	public void setGroup(String group);
+	public Option setGroup(String group);
 
-	public void setHelpViewOrder(int order);
+	public Option setHelpViewOrder(int order);
 
 	public Option setMandatary(boolean isMandatary);
 

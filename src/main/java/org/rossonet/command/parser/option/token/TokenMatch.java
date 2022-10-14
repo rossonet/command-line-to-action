@@ -21,10 +21,6 @@ public final class TokenMatch {
 		this.value = value;
 	}
 
-	public boolean found() {
-		return found;
-	}
-
 	public int[] getFoundInArgs() {
 		return foundInArgs;
 	}
@@ -39,6 +35,10 @@ public final class TokenMatch {
 
 	public String getValue() {
 		return value;
+	}
+
+	public boolean isFound() {
+		return found;
 	}
 
 	@Override

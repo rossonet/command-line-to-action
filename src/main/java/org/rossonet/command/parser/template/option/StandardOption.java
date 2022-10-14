@@ -1,173 +1,160 @@
-package org.rossonet.command.parser.option;
+package org.rossonet.command.parser.template.option;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 import org.rossonet.command.parser.CommandParser;
 import org.rossonet.command.parser.action.Action;
 import org.rossonet.command.parser.action.ErrorAction;
+import org.rossonet.command.parser.exception.CommandParserException;
+import org.rossonet.command.parser.option.Option;
 import org.rossonet.command.parser.option.token.Token;
 
-public class OptionImpl implements Option {
+public abstract class StandardOption implements Option {
 
-	// mantenere non public
-	OptionImpl() {
+	public static final String BASE_GROUP = "Base Commands";
 
-	}
+	private CommandParser commandParser;
+
+	private String description;
+
+	private String group = BASE_GROUP;
+
+	private int helpViewOrder = 1000;
+	private final Collection<Token> tokens = new HashSet<>();
 
 	@Override
 	public Action getAction() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public int getActionPriority() {
-		// TODO Auto-generated method stub
-		return 0;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public CommandParser getCommandParser() {
-		// TODO Auto-generated method stub
-		return null;
+		return commandParser;
 	}
 
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
+		return description;
 	}
 
 	@Override
 	public ErrorAction getErrorAction() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public String getGroup() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.group;
 	}
 
 	@Override
 	public int getHelpViewOrder() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.helpViewOrder;
 	}
 
 	@Override
 	public Action getPostAction() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public int getPostActionPriority() {
-		// TODO Auto-generated method stub
-		return 0;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Action getPreAction() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public int getPreActionPriority() {
-		// TODO Auto-generated method stub
-		return 0;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Collection<Token> getTokenParsers() {
-		// TODO Auto-generated method stub
-		return null;
+		return tokens;
 	}
 
 	@Override
 	public boolean isMandatary() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean isPresentInCommandLine() {
-		// TODO Auto-generated method stub
-		return false;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Option setAction(final Action action) {
-		// TODO Auto-generated method stub
-		return this;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Option setActionPriority(final int priority) {
-		// TODO Auto-generated method stub
-		return this;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Option setCommandParser(final CommandParser commandParser) {
-		// TODO Auto-generated method stub
+		this.commandParser = commandParser;
 		return this;
 	}
 
 	@Override
 	public Option setDescription(final String description) {
-		// TODO Auto-generated method stub
+		this.description = description;
 		return this;
 	}
 
 	@Override
 	public Option setErrorAction(final ErrorAction errorAction) {
-		// TODO Auto-generated method stub
-		return this;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Option setGroup(final String group) {
-		// TODO Auto-generated method stub
+		this.group = group;
 		return this;
 	}
 
 	@Override
 	public Option setHelpViewOrder(final int order) {
-		// TODO Auto-generated method stub
+		helpViewOrder = order;
 		return this;
 	}
 
 	@Override
 	public Option setMandatary(final boolean isMandatary) {
-		// TODO Auto-generated method stub
-		return this;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Option setPostAction(final Action action) {
-		// TODO Auto-generated method stub
-		return this;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Option setPostActionPriority(final int priority) {
-		// TODO Auto-generated method stub
-		return this;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Option setPreAction(final Action action) {
-		// TODO Auto-generated method stub
-		return this;
+		throw new CommandParserException("not implemented");
 	}
 
 	@Override
 	public Option setPreActionPriority(final int priority) {
-		// TODO Auto-generated method stub
-		return this;
+		throw new CommandParserException("not implemented");
 	}
 
 }

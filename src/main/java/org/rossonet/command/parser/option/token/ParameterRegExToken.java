@@ -2,12 +2,12 @@ package org.rossonet.command.parser.option.token;
 
 public class ParameterRegExToken implements Token {
 
-	public final class ParameterRegExTokenBuilder implements TokenBuilder<ParameterRegExToken> {
+	public final static class ParameterRegExTokenBuilder implements TokenBuilder<ParameterRegExToken> {
 
 		@Override
 		public ParameterRegExToken build() {
 			// TODO Auto-generated method stub
-			return null;
+			return new ParameterRegExToken();
 		}
 
 	}
@@ -15,12 +15,6 @@ public class ParameterRegExToken implements Token {
 	// mantenere privato
 	private ParameterRegExToken() {
 
-	}
-
-	@Override
-	public <BUILDER extends TokenBuilder<? extends Token>> BUILDER getNewBuilder() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
@@ -39,6 +33,12 @@ public class ParameterRegExToken implements Token {
 	public TokenMatch lookingInCommandLine(final String[] commandLine) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean searchInTotalCommadLine() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
