@@ -12,6 +12,11 @@ public class ParameterEnumToken implements Token {
 
 	}
 
+	// mantenere privato
+	private ParameterEnumToken() {
+
+	}
+
 	@Override
 	public <BUILDER extends TokenBuilder<? extends Token>> BUILDER getNewBuilder() {
 		// TODO Auto-generated method stub
@@ -22,6 +27,12 @@ public class ParameterEnumToken implements Token {
 	public int getSearchOrder() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public String getTokenHelpLine() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override

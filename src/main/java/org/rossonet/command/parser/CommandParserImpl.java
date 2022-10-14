@@ -7,6 +7,7 @@ import org.rossonet.command.parser.option.Option;
 
 public class CommandParserImpl implements CommandParser {
 
+	// mantenere non public
 	CommandParserImpl() {
 
 	}

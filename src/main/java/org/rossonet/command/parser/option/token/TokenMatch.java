@@ -1,31 +1,73 @@
 package org.rossonet.command.parser.option.token;
 
+import java.util.Arrays;
+
 import org.rossonet.command.parser.option.Option;
 
 public final class TokenMatch {
 
-	public boolean found() {
-		// TODO compeltare
-		return false;
+	private final boolean found;
+	private final int[] foundInArgs;
+	private final Option option;
+	private final Token token;
+	private final String value;
+
+	public TokenMatch(final String value, final boolean found, final int[] foundInArgs, final Option option,
+			final Token token) {
+		this.found = found;
+		this.foundInArgs = foundInArgs;
+		this.option = option;
+		this.token = token;
+		this.value = value;
 	}
 
-	public int[] getFoundArgs() {
-		// TODO compeltare
-		return null;
+	public boolean found() {
+		return found;
+	}
+
+	public int[] getFoundInArgs() {
+		return foundInArgs;
 	}
 
 	public Option getOption() {
-		// TODO compeltare
-		return null;
+		return option;
 	}
 
 	public Token getToken() {
-		// TODO compeltare
-		return null;
+		return token;
 	}
 
 	public String getValue() {
-		// TODO compeltare
-		return null;
+		return value;
+	}
+
+	@Override
+	public String toString() {
+		final StringBuilder builder = new StringBuilder();
+		builder.append("TokenMatch [");
+		if (value != null) {
+			builder.append("value=");
+			builder.append(value);
+			builder.append(", ");
+		}
+		builder.append("found=");
+		builder.append(found);
+		builder.append(", ");
+		if (foundInArgs != null) {
+			builder.append("foundInArgs=");
+			builder.append(Arrays.toString(foundInArgs));
+			builder.append(", ");
+		}
+		if (option != null) {
+			builder.append("option=");
+			builder.append(option);
+			builder.append(", ");
+		}
+		if (token != null) {
+			builder.append("token=");
+			builder.append(token);
+		}
+		builder.append("]");
+		return builder.toString();
 	}
 }

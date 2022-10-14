@@ -8,6 +8,11 @@ import org.rossonet.command.parser.option.token.Token;
 
 public class OptionImpl implements Option {
 
+	// mantenere non public
+	OptionImpl() {
+
+	}
+
 	@Override
 	public Action getAction() {
 		// TODO Auto-generated method stub

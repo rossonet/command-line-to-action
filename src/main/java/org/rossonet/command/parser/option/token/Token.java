@@ -6,6 +6,8 @@ public interface Token {
 
 	public int getSearchOrder();
 
+	public String getTokenHelpLine();
+
 	public TokenMatch lookingInCommandLine(String[] commandLine);
 
 }

@@ -6,8 +6,26 @@ public final class HelpTemplate {
 		return new HelpTemplate(template);
 	}
 
+	private final String template;
+
 	private HelpTemplate(final String template) {
-		// TODO Auto-generated constructor stub
+		this.template = template;
+	}
+
+	public String getTemplate() {
+		return template;
+	}
+
+	@Override
+	public String toString() {
+		final StringBuilder builder = new StringBuilder();
+		builder.append("HelpTemplate [");
+		if (template != null) {
+			builder.append("template=");
+			builder.append(template);
+		}
+		builder.append("]");
+		return builder.toString();
 	}
 
 }
