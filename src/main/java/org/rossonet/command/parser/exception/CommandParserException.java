@@ -1,4 +1,4 @@
-package org.rossonet.command.parser.action;
+package org.rossonet.command.parser.exception;
 
 public class CommandParserException extends RuntimeException {
 

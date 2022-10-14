@@ -2,7 +2,7 @@ package org.rossonet.command.parser;
 
 import java.util.Collection;
 
-import org.rossonet.command.parser.action.CommandParserException;
+import org.rossonet.command.parser.exception.CommandParserException;
 import org.rossonet.command.parser.option.Option;
 
 public interface CommandParser {

@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import org.rossonet.command.parser.action.Action;
 import org.rossonet.command.parser.action.ErrorAction;
+import org.rossonet.command.parser.option.token.Token;
 
 public interface Option {
 

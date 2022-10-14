@@ -1,7 +1,6 @@
-package org.rossonet.command.parser.action;
+package org.rossonet.command.parser.option.token;
 
 import org.rossonet.command.parser.option.Option;
-import org.rossonet.command.parser.option.Token;
 
 public final class TokenMatch {
 
