@@ -1,4 +1,4 @@
-# Template Library Rossonet
+# Command Line Parser Library
 
 [![Test on master branch with Gradle](https://github.com/rossonet/TemplateCommons/actions/workflows/test-on-master-with-gradle.yml/badge.svg)](https://github.com/rossonet/TemplateCommons/actions/workflows/test-on-master-with-gradle.yml)
 
