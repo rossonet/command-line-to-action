@@ -21,9 +21,27 @@ public class OptionImpl implements Option {
 	}
 
 	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
 	public ErrorAction getErrorAction() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public String getGroup() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getHelpViewOrder() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
@@ -81,9 +99,27 @@ public class OptionImpl implements Option {
 	}
 
 	@Override
+	public void setDescription(final String description) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
 	public Option setErrorAction(final ErrorAction errorAction) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void setGroup(final String group) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setHelpViewOrder(final int order) {
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override

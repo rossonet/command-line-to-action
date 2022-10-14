@@ -16,7 +16,13 @@ public interface Option {
 
 	public int getActionPriority();
 
+	public String getDescription();
+
 	public ErrorAction getErrorAction();
+
+	public String getGroup();
+
+	public int getHelpViewOrder();
 
 	public Action getPostAction();
 
@@ -36,7 +42,13 @@ public interface Option {
 
 	public Option setActionPriority(int priority);
 
+	public void setDescription(String description);
+
 	public Option setErrorAction(ErrorAction errorAction);
+
+	public void setGroup(String group);
+
+	public void setHelpViewOrder(int order);
 
 	public Option setMandatary(boolean isMandatary);
 
