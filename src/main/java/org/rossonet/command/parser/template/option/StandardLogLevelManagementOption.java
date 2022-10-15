@@ -7,6 +7,15 @@ import org.rossonet.command.parser.exception.CommandParserException;
 import org.rossonet.command.parser.option.Option;
 import org.rossonet.command.parser.option.token.TokenMatch;
 
+/**
+ * @link org.rossonet.command.parser.option.Option implementation to manage -l
+ *       <NEW LOGLEVEL> and --log <NEW LOGLEVEL> parameters
+ *
+ * @see org.rossonet.command.parser.template.option.StandardOption
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
 public class StandardLogLevelManagementOption extends StandardOption {
 
 	private final ChangeLogLevelAction changeLogLevelAction;

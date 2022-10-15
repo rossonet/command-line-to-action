@@ -1,6 +1,15 @@
 package org.rossonet.command.parser.option.token;
 
-public class ParameterUnaryToken implements Token {
+/**
+ *
+ * Looking in the command line string to find single parameter without value.
+ * For example --version , play or -h
+ *
+ * @see org.rossonet.command.parser.option.token.TokenAnalyzer
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
+public class ParameterUnaryToken implements TokenAnalyzer {
 
 	public final static class ParameterUnaryTokenBuilder implements TokenBuilder<ParameterUnaryToken> {
 

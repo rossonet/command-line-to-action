@@ -1,6 +1,17 @@
 package org.rossonet.command.parser.option.token;
 
-public class ParameterEnumToken implements Token {
+/**
+ *
+ * Looking in the command line string to find a match with a flag and the
+ * related value. Also check if the value is in collection of strings
+ * (enumerator).
+ *
+ * @see org.rossonet.command.parser.option.token.TokenAnalyzer
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
+public class ParameterEnumToken implements TokenAnalyzer {
 
 	public final static class ParameterEnumTokenBuilder implements TokenBuilder<ParameterEnumToken> {
 

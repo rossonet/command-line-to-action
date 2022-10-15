@@ -5,8 +5,14 @@ import java.util.Collection;
 import org.rossonet.command.parser.CommandParser;
 import org.rossonet.command.parser.action.Action;
 import org.rossonet.command.parser.action.ErrorAction;
-import org.rossonet.command.parser.option.token.Token;
+import org.rossonet.command.parser.option.token.TokenAnalyzer;
 
+/**
+ * Base implementation of the @link org.rossonet.command.parser.option.Option
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
 public class OptionImpl implements Option {
 
 	// mantenere non public
@@ -81,7 +87,7 @@ public class OptionImpl implements Option {
 	}
 
 	@Override
-	public Collection<Token> getTokenParsers() {
+	public Collection<TokenAnalyzer> getTokenParsers() {
 		// TODO Auto-generated method stub
 		return null;
 	}

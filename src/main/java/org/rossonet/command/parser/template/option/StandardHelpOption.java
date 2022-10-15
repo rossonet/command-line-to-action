@@ -4,6 +4,16 @@ import org.rossonet.command.parser.action.Action;
 import org.rossonet.command.parser.option.Option;
 import org.rossonet.command.parser.option.token.TokenMatch;
 
+/**
+ *
+ * Manage the unary flags -h and --help
+ *
+ * @see org.rossonet.command.parser.template.option.StandardOption
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
+
 public class StandardHelpOption extends StandardOption {
 
 	private StandardPrinter printer = new StandardPrinter();

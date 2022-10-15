@@ -5,6 +5,12 @@ import java.util.Collection;
 import org.rossonet.command.parser.exception.CommandParserException;
 import org.rossonet.command.parser.option.Option;
 
+/**
+ * implementations of @link org.rossonet.command.parser.CommandParser
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
 public class CommandParserImpl implements CommandParser {
 
 	// mantenere non public

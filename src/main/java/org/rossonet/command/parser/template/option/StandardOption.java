@@ -8,8 +8,17 @@ import org.rossonet.command.parser.action.Action;
 import org.rossonet.command.parser.action.ErrorAction;
 import org.rossonet.command.parser.exception.CommandParserException;
 import org.rossonet.command.parser.option.Option;
-import org.rossonet.command.parser.option.token.Token;
+import org.rossonet.command.parser.option.token.TokenAnalyzer;
 
+/**
+ * Abstract class used for the @link org.rossonet.command.parser.option.Option
+ * templates
+ *
+ * @see org.rossonet.command.parser.option.Option
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
 public abstract class StandardOption implements Option {
 
 	public static final String BASE_GROUP = "Base Commands";
@@ -21,7 +30,7 @@ public abstract class StandardOption implements Option {
 	private String group = BASE_GROUP;
 
 	private int helpViewOrder = 1000;
-	private final Collection<Token> tokens = new HashSet<>();
+	private final Collection<TokenAnalyzer> tokens = new HashSet<>();
 
 	@Override
 	public Action getAction() {
@@ -79,7 +88,7 @@ public abstract class StandardOption implements Option {
 	}
 
 	@Override
-	public Collection<Token> getTokenParsers() {
+	public Collection<TokenAnalyzer> getTokenParsers() {
 		return tokens;
 	}
 
