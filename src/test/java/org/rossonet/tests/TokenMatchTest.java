@@ -22,7 +22,7 @@ class TokenMatchTest {
 
 	@Test
 	void testTokenMatchWithParameterEnumTokenBuilder() throws InstantiationException, IllegalAccessException {
-		final String value = UUID.randomUUID().toString();
+		final String[] value = new String[] { UUID.randomUUID().toString() };
 		final boolean found = UUID.randomUUID().getLeastSignificantBits() % 2 == 0;
 		final int[] originalArgs = new int[] { (int) UUID.randomUUID().getLeastSignificantBits(),
 				(int) UUID.randomUUID().getLeastSignificantBits(), (int) UUID.randomUUID().getLeastSignificantBits() };
@@ -39,7 +39,7 @@ class TokenMatchTest {
 
 	@Test
 	void testTokenMatchWithParameterRegExTokenBuilder() throws InstantiationException, IllegalAccessException {
-		final String value = UUID.randomUUID().toString();
+		final String[] value = new String[] { UUID.randomUUID().toString() };
 		final boolean found = UUID.randomUUID().getLeastSignificantBits() % 2 == 0;
 		final int[] originalArgs = new int[] { (int) UUID.randomUUID().getLeastSignificantBits(),
 				(int) UUID.randomUUID().getLeastSignificantBits(), (int) UUID.randomUUID().getLeastSignificantBits() };
@@ -56,7 +56,7 @@ class TokenMatchTest {
 
 	@Test
 	void testTokenMatchWithRegExToken() throws InstantiationException, IllegalAccessException {
-		final String value = UUID.randomUUID().toString();
+		final String[] value = new String[] { UUID.randomUUID().toString() };
 		final boolean found = UUID.randomUUID().getLeastSignificantBits() % 2 == 0;
 		final int[] originalArgs = new int[] { (int) UUID.randomUUID().getLeastSignificantBits(),
 				(int) UUID.randomUUID().getLeastSignificantBits(), (int) UUID.randomUUID().getLeastSignificantBits() };
@@ -73,7 +73,7 @@ class TokenMatchTest {
 
 	@Test
 	void testTokenMatchWithUnaryTokenBuilder() throws InstantiationException, IllegalAccessException {
-		final String value = UUID.randomUUID().toString();
+		final String[] value = new String[] { UUID.randomUUID().toString() };
 		final boolean found = UUID.randomUUID().getLeastSignificantBits() % 2 == 0;
 		final int[] originalArgs = new int[] { (int) UUID.randomUUID().getLeastSignificantBits(),
 				(int) UUID.randomUUID().getLeastSignificantBits(), (int) UUID.randomUUID().getLeastSignificantBits() };
