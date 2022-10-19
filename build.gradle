@@ -150,9 +150,9 @@ publishing {
           }
         }
         scm {
-          connection = 'scm:git:git://github.com/rossonet/TemplateCommons.git'
-          developerConnection = 'scm:git:ssh://github.com:rossonet/TemplateCommons.git'
-          url = 'https://github.com/rossonet/TemplateCommons/tree/master'
+          connection = 'scm:git:git://github.com/rossonet/command-line-to-action.git'
+          developerConnection = 'scm:git:ssh://github.com:rossonet/command-line-to-action.git'
+          url = 'https://github.com/rossonet/command-line-to-action/tree/master'
         }
       }
     }
