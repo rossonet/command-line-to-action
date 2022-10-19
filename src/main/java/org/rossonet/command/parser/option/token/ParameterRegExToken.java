@@ -1,6 +1,16 @@
 package org.rossonet.command.parser.option.token;
 
-public class ParameterRegExToken implements Token {
+/**
+ *
+ * Looking in the command line string to find a match with a flag and the
+ * related value. Also check the value with a regular expression pattern
+ *
+ * @see org.rossonet.command.parser.option.token.TokenAnalyzer
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
+public class ParameterRegExToken implements TokenAnalyzer {
 
 	public final static class ParameterRegExTokenBuilder implements TokenBuilder<ParameterRegExToken> {
 

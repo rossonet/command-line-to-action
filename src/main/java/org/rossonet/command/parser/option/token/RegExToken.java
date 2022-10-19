@@ -1,6 +1,14 @@
 package org.rossonet.command.parser.option.token;
 
-public class RegExToken implements Token {
+/**
+ * Looking in the command line string to find a match with a regular expression
+ *
+ * @see org.rossonet.command.parser.option.token.TokenAnalyzer
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
+public class RegExToken implements TokenAnalyzer {
 
 	public final static class RegExTokenBuilder implements TokenBuilder<RegExToken> {
 

@@ -4,16 +4,26 @@ import java.util.Arrays;
 
 import org.rossonet.command.parser.option.Option;
 
+/**
+ * Represents the match done by a @link
+ * org.rossonet.command.parser.option.token.TokenAnalyzer on the command line
+ * String
+ *
+ * @see org.rossonet.command.parser.option.token.TokenAnalyzer
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
 public final class TokenMatch {
 
 	private final boolean found;
 	private final int[] foundInArgs;
 	private final Option option;
-	private final Token token;
-	private final String value;
+	private final TokenAnalyzer token;
+	private final String[] value;
 
-	public TokenMatch(final String value, final boolean found, final int[] foundInArgs, final Option option,
-			final Token token) {
+	public TokenMatch(final String[] value, final boolean found, final int[] foundInArgs, final Option option,
+			final TokenAnalyzer token) {
 		this.found = found;
 		this.foundInArgs = foundInArgs;
 		this.option = option;
@@ -29,11 +39,11 @@ public final class TokenMatch {
 		return option;
 	}
 
-	public Token getToken() {
+	public TokenAnalyzer getToken() {
 		return token;
 	}
 
-	public String getValue() {
+	public String[] getValue() {
 		return value;
 	}
 

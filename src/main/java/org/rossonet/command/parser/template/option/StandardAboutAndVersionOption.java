@@ -4,6 +4,16 @@ import org.rossonet.command.parser.action.Action;
 import org.rossonet.command.parser.option.Option;
 import org.rossonet.command.parser.option.token.TokenMatch;
 
+/**
+ *
+ * Manage the unary flags --credits and --version
+ *
+ * @see org.rossonet.command.parser.template.option.StandardOption
+ *
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
+
 public class StandardAboutAndVersionOption extends StandardOption {
 
 	private StandardPrinter printer = new StandardPrinter();
@@ -12,11 +22,6 @@ public class StandardAboutAndVersionOption extends StandardOption {
 		setGroup(StandardOption.BASE_GROUP);
 		setDescription("print version and credit");
 		setHelpViewOrder(9999);
-	}
-
-	private String getAboutAndVersionMessage() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
@@ -44,6 +49,11 @@ public class StandardAboutAndVersionOption extends StandardOption {
 
 	public void setPrinter(final StandardPrinter printer) {
 		this.printer = printer;
+	}
+
+	private String getAboutAndVersionMessage() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

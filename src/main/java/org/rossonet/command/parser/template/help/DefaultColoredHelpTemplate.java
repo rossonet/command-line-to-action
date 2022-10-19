@@ -1,10 +1,35 @@
+/**
+ * Template for online help with ANSI colors
+ *
+ * @see org.rossonet.command.parser.HelpTemplate
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
 package org.rossonet.command.parser.template.help;
 
 import org.rossonet.command.parser.HelpTemplate;
 
 public class DefaultColoredHelpTemplate extends HelpTemplate {
 
-	private final static String COLORED_HELP_TEMPLATE = "colored help template"; // TODO completare definizione
+	public static final String ANSI_BLACK = "\u001B[30m";
+
+	public static final String ANSI_BLUE = "\u001B[34m";
+
+	public static final String ANSI_CYAN = "\u001B[36m";
+
+	public static final String ANSI_GREEN = "\u001B[32m";
+
+	public static final String ANSI_PURPLE = "\u001B[35m";
+
+	public static final String ANSI_RED = "\u001B[31m";
+
+	public static final String ANSI_RESET = "\u001B[0m";
+
+	public static final String ANSI_WHITE = "\u001B[37m";
+	public static final String ANSI_YELLOW = "\u001B[33m";
+
+	private final static String COLORED_HELP_TEMPLATE = ANSI_GREEN + "colored help template" + ANSI_RESET;
+	// TODO completare definizione
 
 	public DefaultColoredHelpTemplate() {
 		super(COLORED_HELP_TEMPLATE);

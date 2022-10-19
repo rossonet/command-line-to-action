@@ -5,6 +5,14 @@ import java.util.Collection;
 import org.rossonet.command.parser.exception.CommandParserException;
 import org.rossonet.command.parser.option.Option;
 
+/**
+ * Entry point for the API.
+ *
+ * TODO descrivere il comportamento e i link della documentazione
+ * 
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
 public interface CommandParser {
 
 	public static enum Status {

@@ -15,7 +15,7 @@ import org.rossonet.command.parser.option.token.ParameterUnaryToken;
 import org.rossonet.command.parser.option.token.ParameterUnaryToken.ParameterUnaryTokenBuilder;
 import org.rossonet.command.parser.option.token.RegExToken;
 import org.rossonet.command.parser.option.token.RegExToken.RegExTokenBuilder;
-import org.rossonet.command.parser.option.token.Token;
+import org.rossonet.command.parser.option.token.TokenAnalyzer;
 import org.rossonet.command.parser.option.token.TokenMatch;
 
 class TokenMatchTest {
@@ -27,7 +27,7 @@ class TokenMatchTest {
 		final int[] originalArgs = new int[] { (int) UUID.randomUUID().getLeastSignificantBits(),
 				(int) UUID.randomUUID().getLeastSignificantBits(), (int) UUID.randomUUID().getLeastSignificantBits() };
 		final Option option = Option.getNewOption();
-		final Token token = Token.getNewBuilder(ParameterEnumTokenBuilder.class).build();
+		final TokenAnalyzer token = TokenAnalyzer.getNewBuilder(ParameterEnumTokenBuilder.class).build();
 		final TokenMatch tokenMatch = new TokenMatch(value, found, originalArgs, option, token);
 		assertEquals(value, tokenMatch.getValue());
 		assertEquals(found, tokenMatch.isFound());
@@ -44,7 +44,7 @@ class TokenMatchTest {
 		final int[] originalArgs = new int[] { (int) UUID.randomUUID().getLeastSignificantBits(),
 				(int) UUID.randomUUID().getLeastSignificantBits(), (int) UUID.randomUUID().getLeastSignificantBits() };
 		final Option option = Option.getNewOption();
-		final Token token = Token.getNewBuilder(ParameterRegExTokenBuilder.class).build();
+		final TokenAnalyzer token = TokenAnalyzer.getNewBuilder(ParameterRegExTokenBuilder.class).build();
 		final TokenMatch tokenMatch = new TokenMatch(value, found, originalArgs, option, token);
 		assertEquals(value, tokenMatch.getValue());
 		assertEquals(found, tokenMatch.isFound());
@@ -61,7 +61,7 @@ class TokenMatchTest {
 		final int[] originalArgs = new int[] { (int) UUID.randomUUID().getLeastSignificantBits(),
 				(int) UUID.randomUUID().getLeastSignificantBits(), (int) UUID.randomUUID().getLeastSignificantBits() };
 		final Option option = Option.getNewOption();
-		final Token token = Token.getNewBuilder(RegExTokenBuilder.class).build();
+		final TokenAnalyzer token = TokenAnalyzer.getNewBuilder(RegExTokenBuilder.class).build();
 		final TokenMatch tokenMatch = new TokenMatch(value, found, originalArgs, option, token);
 		assertEquals(value, tokenMatch.getValue());
 		assertEquals(found, tokenMatch.isFound());
@@ -78,7 +78,7 @@ class TokenMatchTest {
 		final int[] originalArgs = new int[] { (int) UUID.randomUUID().getLeastSignificantBits(),
 				(int) UUID.randomUUID().getLeastSignificantBits(), (int) UUID.randomUUID().getLeastSignificantBits() };
 		final Option option = Option.getNewOption();
-		final Token token = Token.getNewBuilder(ParameterUnaryTokenBuilder.class).build();
+		final TokenAnalyzer token = TokenAnalyzer.getNewBuilder(ParameterUnaryTokenBuilder.class).build();
 		final TokenMatch tokenMatch = new TokenMatch(value, found, originalArgs, option, token);
 		assertEquals(value, tokenMatch.getValue());
 		assertEquals(found, tokenMatch.isFound());

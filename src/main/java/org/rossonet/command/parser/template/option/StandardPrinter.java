@@ -1,5 +1,13 @@
 package org.rossonet.command.parser.template.option;
 
+/**
+ * Standard output for templates
+ *
+ * @see org.rossonet.command.parser.template.option.StandardAboutAndVersionOption
+ * @see org.rossonet.command.parser.template.option.StandardHelpOption
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
 public class StandardPrinter {
 
 	public void writeError(final String output) {

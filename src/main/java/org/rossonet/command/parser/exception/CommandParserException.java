@@ -1,5 +1,12 @@
 package org.rossonet.command.parser.exception;
 
+/**
+ * Exception during the CommandParser's execution.
+ *
+ * @see org.rossonet.command.parser.CommandParser
+ * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
+ *
+ */
 public class CommandParserException extends RuntimeException {
 
 	private static final long serialVersionUID = -6018039925116047330L;
