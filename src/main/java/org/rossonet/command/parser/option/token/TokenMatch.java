@@ -20,15 +20,15 @@ public final class TokenMatch {
 	private final int[] foundInArgs;
 	private final Option option;
 	private final TokenAnalyzer token;
-	private final String[] value;
+	private final String[] values;
 
-	public TokenMatch(final String[] value, final boolean found, final int[] foundInArgs, final Option option,
+	public TokenMatch(final String[] values, final boolean found, final int[] foundInArgs, final Option option,
 			final TokenAnalyzer token) {
 		this.found = found;
 		this.foundInArgs = foundInArgs;
 		this.option = option;
 		this.token = token;
-		this.value = value;
+		this.values = values;
 	}
 
 	public int[] getFoundInArgs() {
@@ -43,8 +43,8 @@ public final class TokenMatch {
 		return token;
 	}
 
-	public String[] getValue() {
-		return value;
+	public String[] getValues() {
+		return values;
 	}
 
 	public boolean isFound() {
@@ -55,10 +55,17 @@ public final class TokenMatch {
 	public String toString() {
 		final StringBuilder builder = new StringBuilder();
 		builder.append("TokenMatch [");
-		if (value != null) {
-			builder.append("value=");
-			builder.append(value);
-			builder.append(", ");
+		if (values != null) {
+			builder.append("values=[");
+			int c = 0;
+			for (final String v : values) {
+				if (c > 0) {
+					builder.append(", ");
+				}
+				builder.append(c + ": " + v);
+				c++;
+			}
+			builder.append("], ");
 		}
 		builder.append("found=");
 		builder.append(found);

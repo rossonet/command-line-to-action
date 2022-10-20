@@ -29,7 +29,7 @@ class TokenMatchTest {
 		final Option option = Option.getNewOption();
 		final TokenAnalyzer token = TokenAnalyzer.getNewBuilder(ParameterEnumTokenBuilder.class).build();
 		final TokenMatch tokenMatch = new TokenMatch(value, found, originalArgs, option, token);
-		assertEquals(value, tokenMatch.getValue());
+		assertEquals(value, tokenMatch.getValues());
 		assertEquals(found, tokenMatch.isFound());
 		assertEquals(originalArgs, tokenMatch.getFoundInArgs());
 		assertEquals(option, tokenMatch.getOption());
@@ -46,7 +46,7 @@ class TokenMatchTest {
 		final Option option = Option.getNewOption();
 		final TokenAnalyzer token = TokenAnalyzer.getNewBuilder(ParameterRegExTokenBuilder.class).build();
 		final TokenMatch tokenMatch = new TokenMatch(value, found, originalArgs, option, token);
-		assertEquals(value, tokenMatch.getValue());
+		assertEquals(value, tokenMatch.getValues());
 		assertEquals(found, tokenMatch.isFound());
 		assertEquals(originalArgs, tokenMatch.getFoundInArgs());
 		assertEquals(option, tokenMatch.getOption());
@@ -63,7 +63,7 @@ class TokenMatchTest {
 		final Option option = Option.getNewOption();
 		final TokenAnalyzer token = TokenAnalyzer.getNewBuilder(RegExTokenBuilder.class).build();
 		final TokenMatch tokenMatch = new TokenMatch(value, found, originalArgs, option, token);
-		assertEquals(value, tokenMatch.getValue());
+		assertEquals(value, tokenMatch.getValues());
 		assertEquals(found, tokenMatch.isFound());
 		assertEquals(originalArgs, tokenMatch.getFoundInArgs());
 		assertEquals(option, tokenMatch.getOption());
@@ -80,7 +80,7 @@ class TokenMatchTest {
 		final Option option = Option.getNewOption();
 		final TokenAnalyzer token = TokenAnalyzer.getNewBuilder(ParameterUnaryTokenBuilder.class).build();
 		final TokenMatch tokenMatch = new TokenMatch(value, found, originalArgs, option, token);
-		assertEquals(value, tokenMatch.getValue());
+		assertEquals(value, tokenMatch.getValues());
 		assertEquals(found, tokenMatch.isFound());
 		assertEquals(originalArgs, tokenMatch.getFoundInArgs());
 		assertEquals(option, tokenMatch.getOption());

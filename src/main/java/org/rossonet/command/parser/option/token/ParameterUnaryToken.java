@@ -1,5 +1,7 @@
 package org.rossonet.command.parser.option.token;
 
+import org.rossonet.command.parser.option.Option;
+
 /**
  *
  * Looking in the command line string to find single parameter without value.
@@ -9,45 +11,58 @@ package org.rossonet.command.parser.option.token;
  * @author Andrea Ambrosini [Rossonet s.c.a r.l.]
  *
  */
-public class ParameterUnaryToken implements TokenAnalyzer {
+public class ParameterUnaryToken extends TokenAnalyzer {
 
-	public final static class ParameterUnaryTokenBuilder implements TokenBuilder<ParameterUnaryToken> {
+	public final static class ParameterUnaryTokenBuilder extends TokenBuilder<ParameterUnaryToken> {
+
+		private String parameter = null;
 
 		@Override
 		public ParameterUnaryToken build() {
-			// TODO Auto-generated method stub
-			return new ParameterUnaryToken();
+			return new ParameterUnaryToken(searchOrder, searchInTotalCommadLine, tokenHelpLine, parameter);
+		}
+
+		public ParameterUnaryTokenBuilder setParameter(final String flag) {
+			this.parameter = flag;
+			return this;
+		}
+
+		@SuppressWarnings("unchecked")
+		@Override
+		public ParameterUnaryTokenBuilder setSearchInTotalCommadLine(final boolean searchInTotalCommadLine) {
+			this.searchInTotalCommadLine = searchInTotalCommadLine;
+			return this;
+		}
+
+		@SuppressWarnings("unchecked")
+		@Override
+		public ParameterUnaryTokenBuilder setSearchOrder(final int searchOrder) {
+			this.searchOrder = searchOrder;
+			return this;
+		}
+
+		@SuppressWarnings("unchecked")
+		@Override
+		public ParameterUnaryTokenBuilder setTokenHelpLine(final String tokenHelpLine) {
+			this.tokenHelpLine = tokenHelpLine;
+			return this;
 		}
 
 	}
 
+	private final String parameter;
+
 	// mantenere privato
-	private ParameterUnaryToken() {
-
+	private ParameterUnaryToken(final int searchOrder, final boolean searchInTotalCommadLine,
+			final String tokenHelpLine, final String parameter) {
+		super(searchOrder, searchInTotalCommadLine, tokenHelpLine);
+		this.parameter = parameter;
 	}
 
 	@Override
-	public int getSearchOrder() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public String getTokenHelpLine() {
+	public TokenMatch lookingInCommandLine(final Option option, final String[] commandLine) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public TokenMatch lookingInCommandLine(final String[] commandLine) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean searchInTotalCommadLine() {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 }
