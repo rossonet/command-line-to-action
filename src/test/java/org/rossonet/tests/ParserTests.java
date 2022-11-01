@@ -7,12 +7,12 @@ import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import org.rossonet.main.Main;
+import org.rossonet.command.parser.CommandParser;
 
 @TestMethodOrder(OrderAnnotation.class)
-public class MainTest {
+public class ParserTests {
 
-	private static final Logger logger = Logger.getLogger(MainTest.class.getName());
+	private static final Logger logger = Logger.getLogger(ParserTests.class.getName());
 
 	@AfterEach
 	public void cleanTestsContext() throws Exception {
@@ -21,9 +21,8 @@ public class MainTest {
 
 	@Test
 	@Order(1)
-	public void runMain() throws Exception {
-		final String[] args = new String[] {};
-		Main.main(args);
+	public void runBaseCostructionTest() throws Exception {
+		final CommandParser parser = CommandParser.getNewCommandParser();
 		logger.info("ok");
 	}
 
