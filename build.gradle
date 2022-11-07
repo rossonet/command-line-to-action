@@ -11,7 +11,7 @@ buildscript {
 }
 
 description = "Command line parser with support for help and completion"
-group = 'org.rossonet.commons.command'
+group = 'net.rossonet.commons.command'
 version = '0.1.1'
 
 ext {
