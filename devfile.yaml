@@ -1,58 +1,17 @@
----
-apiVersion: 1.0.0
+schemaVersion: 2.1.0
 metadata:
-  name: command-line-to-action-dev
-attributes:
-  persistVolumes: 'false'
+  name: command-line-to-action
 projects:
-  -
-    name: command-line-to-action
-    source:
-      type: git
-      location: "https://github.com/andrea-ambrosini/command-line-to-action.git"
-components:
-  -
-    type: chePlugin
-    id: redhat/java/latest
-  -
-    type: dockerimage
-    alias: gradle
-    image: quay.io/eclipse/che-java11-gradle:next
-    env:
-      - name: GRADLE_USER_HOME
-        value: /home/gradle/.gradle
-      - name: JAVA_OPTS
-        value: "-XX:MaxRAMPercentage=50 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10
-          -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90
-          -Dsun.zip.disableMemoryMapping=true -Xms20m -Djava.security.egd=file:/dev/./urandom"
-      - name: JAVA_TOOL_OPTIONS
-        value: "-XX:MaxRAMPercentage=50 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10
-          -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90
-          -Dsun.zip.disableMemoryMapping=true -Xms20m -Djava.security.egd=file:/dev/./urandom"
-      - name: HOME
-        value: /home/gradle
-    memoryLimit: 4096Mi
-    endpoints:
-      - name: 'tcp8080'
-        port: 8080
-    volumes:
-      - name: gradle
-        containerPath: /home/gradle/.gradle
-    mountSources: true
+  - name: command-line-to-action
+    git:
+      location: 'https://github.com/andrea-ambrosini/command-line-to-action.git'
+components: []
 commands:
-  -
-    name: gradle build
-    actions:
-      -
-        type: exec
-        component: gradle
-        command: "./gradlew build"
-        workdir: ${CHE_PROJECTS_ROOT}/command-line-to-action
-  -
-    name: gradle run
-    actions:
-      -
-        type: exec
-        component: gradle
-        command: "./gradlew run"
-        workdir: ${CHE_PROJECTS_ROOT}/command-line-to-action
+  - exec:
+      commandLine: ./gradlew clean build --info
+      component: tools
+      group:
+        isDefault: true
+        kind: build
+      workingDir: '${PROJECT_SOURCE}'
+    id: gradle-build
