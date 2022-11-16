@@ -1,10 +1,6 @@
 schemaVersion: 2.1.0
 metadata:
   name: command-line-to-action
-projects:
-  - name: command-line-to-action
-    git:
-      location: 'https://github.com/andrea-ambrosini/command-line-to-action.git'
 components: []
 commands:
   - exec:
