@@ -17,7 +17,7 @@ components:
   -
     type: dockerimage
     alias: gradle
-    image: quay.io/eclipse/che-java11-gradle:nightly
+    image: quay.io/eclipse/che-java11-gradle:next
     env:
       - name: GRADLE_USER_HOME
         value: /home/gradle/.gradle
@@ -46,7 +46,7 @@ commands:
       -
         type: exec
         component: gradle
-        command: "gradle build"
+        command: "./gradlew build"
         workdir: ${CHE_PROJECTS_ROOT}/command-line-to-action
   -
     name: gradle run
@@ -54,5 +54,5 @@ commands:
       -
         type: exec
         component: gradle
-        command: "gradle run"
+        command: "./gradlew run"
         workdir: ${CHE_PROJECTS_ROOT}/command-line-to-action
