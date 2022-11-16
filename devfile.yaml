@@ -33,7 +33,7 @@ components:
         value: /home/gradle
     memoryLimit: 4096Mi
     endpoints:
-      - name: '8080/tcp'
+      - name: 'tcp8080'
         port: 8080
     volumes:
       - name: gradle
